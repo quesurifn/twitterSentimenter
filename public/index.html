@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twitter Sentimenter</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+  <body ng-app="app" ng-controller="myController">
+    <div class="container-fluid">
+      <div class="row">
+          <div style="padding-top: 10rem;">
+            <i class="fa fa-twitter" aria-hidden="true" style="font-size: 5rem; margin-left:48vw;"></i>
+            <h2 class="text-center">Sentimenter</h2>
+          </div>
+          <div class="col-md-6 col-md-offset-3">
+            <div class="input-group" style="padding-top: 8em;">
+              <input type="text" class="form-control" placeholder="Twitter Username" ng-model="userName">
+              <span class="input-group-btn">
+                <button type="button" name="button" class="btn btn-default" ng-click="sendData()">Search</button>
+              </span>
+            </div>
+            {{PostDataResponse}}
+          </div>
+        </div>
+      </div>
+      <script src="https://use.fontawesome.com/59cc162c43.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js" type="text/javascript"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js" type="text/javascript"></script>
+      <script src="javascripts/app.js" type="text/javascript"></script>
+    </body>
+    </html>
