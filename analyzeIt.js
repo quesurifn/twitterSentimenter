@@ -21,13 +21,13 @@ function finalScore(score) {
 function finalMagnitude(magnitude) {
   if (magnitude < 1) {
     return " to a weak magnitude";
-  } else if (magnitude  > 1 && magnitude < 2) {
+  } else if (magnitude  >= 1 && magnitude <= 2) {
     return " to a weaker magnitude";
-  } else if (magnitude > 2 && magnitude < 3) {
+  } else if (magnitude >= 2 && magnitude <= 3) {
       return " to an average magnitude";
-  } else if (magnitude >3 && magnitude < 4) {
+  } else if (magnitude >= 3 && magnitude <= 4) {
     return " to a stronger magnitude";
-  } else if (magnitude >4 && magnitude < 5) {
+  } else if (magnitude >= 4 && magnitude <= 5) {
     return " to a strong magnitude";
   } else if (magnitude === 5) {
     return " to a very strong magnitude";

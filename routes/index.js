@@ -37,11 +37,13 @@ router.post("/postUsername", function(req, res){
           console.log(err);
           res.status(500).send("Error detecting sentiment: " + err);
         } //if err
+        console.log(score);
           parsedScore = score.score;
           parsedMagnitude = score.magnitude;
           finalScore = analyzeIt.finalScore(parsedScore);
           finalMagnitude = analyzeIt.finalMagnitude(parsedMagnitude);
           result = finalScore + finalMagnitude;
+          console.log(finalMagnitude);
           console.log(result);
           res.send(result);//send to angular
         });//detect sentiment
