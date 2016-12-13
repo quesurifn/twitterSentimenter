@@ -25,6 +25,8 @@ router.post("/postUsername", function(req, res){
       var parsedScore;
       var parsedMagnitude;
       var finalScore;
+      var finalMagnitude;
+      var result;
       var options = {
         verbose: true
       }; // options
@@ -37,9 +39,11 @@ router.post("/postUsername", function(req, res){
         } //if err
           parsedScore = score.score;
           parsedMagnitude = score.magnitude;
-          finalScore = analyzeIt.finalScore(parsedScore, parsedMagnitude);
-          console.log(finalScore);
-          res.send(finalScore);
+          finalScore = analyzeIt.finalScore(parsedScore);
+          finalMagnitude = analyzeIt.finalMagnitude(parsedMagnitude);
+          result = finalScore + finalMagnitude;
+          console.log(result);
+          res.send(result);//send to angular
         });//detect sentiment
       } else {
       res.status(500).send("Twitter error: " + error);

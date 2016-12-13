@@ -7,12 +7,12 @@
     <title>Twitter Sentimenter</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   </head>
-  <body ng-app="app" ng-controller="myController">
+  <body ng-app="app" ng-controller="myController" style="background-color:#1b1b1b;">
     <div class="container-fluid">
       <div class="row">
           <div style="padding-top: 10rem;">
-            <i class="fa fa-twitter" aria-hidden="true" style="font-size: 5rem; margin-left:48vw;"></i>
-            <h2 class="text-center">Sentimenter</h2>
+            <i class="fa fa-twitter" aria-hidden="true" style="font-size: 5rem; margin-left:48vw; color:white;"></i>
+            <h2 class="text-center" style="color:white;">Sentimenter</h2>
           </div>
           <div class="col-md-6 col-md-offset-3">
             <div class="input-group" style="padding-top: 8em;">
@@ -21,7 +21,10 @@
                 <button type="button" name="button" class="btn btn-default" ng-click="sendData()">Search</button>
               </span>
             </div>
-            {{PostDataResponse}}
+            <h4 class="text-center" style="color:white">Twitter Handle E.g. kylecrfahey</h4>
+            <div class="col-md-12" style="padding-top: 3em;">
+              <h3 class="text-center" style="color: white;">{{PostDataResponse}}</h3>
+            </div>
           </div>
         </div>
       </div>
