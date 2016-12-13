@@ -8,7 +8,7 @@ function seperateData(data) {
   return stringTweets;
 }
 
-function finalScore(score) {
+function finalScore(score, magnitude) {
   if (score > 0) {
     return "This person trends positive";
   } else if (score < 0) {

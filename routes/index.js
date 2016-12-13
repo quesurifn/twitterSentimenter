@@ -40,7 +40,7 @@ router.post("/postUsername", function(req, res){
         console.log(score);
           parsedScore = score.score;
           parsedMagnitude = score.magnitude;
-          finalScore = analyzeIt.finalScore(parsedScore);
+          finalScore = analyzeIt.finalScore(parsedScore, parsedMagnitude);
           finalMagnitude = analyzeIt.finalMagnitude(parsedMagnitude);
           result = finalScore + finalMagnitude;
           console.log(finalMagnitude);
