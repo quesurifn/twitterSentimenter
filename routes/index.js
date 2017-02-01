@@ -35,7 +35,7 @@ router.post("/postUsername", function(req, res){
       document.detectSentiment(options, function(err, score) {
         if (err) {
           console.log(err);
-          res.status(500).send("Error detecting sentiment: " + err);
+          res.status(500).send("Invalid Username");
         } //if err
         console.log(score);
           parsedScore = score.score;
@@ -48,7 +48,7 @@ router.post("/postUsername", function(req, res){
           res.send(result);//send to angular
         });//detect sentiment
       } else {
-      res.status(500).send("Twitter error: " + error);
+      res.status(500).send("Invalid Username");
     }
   });//client get statuses
 });//router post
